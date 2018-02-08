@@ -1,8 +1,6 @@
-# ember-vim-projections
+# Ember Vim Projections
 
 Run this command at the root of your ember app:
-````
-
-curl -G https://raw.githubusercontent.com/jsncmgs1/ember-vim-projections/master/.projections.json -o .projections.json
-
+````bash
+$ curl -G https://raw.githubusercontent.com/groundswell-productivity/ember-vim-projections/master/.projections.json -o .projections.json
 ````
