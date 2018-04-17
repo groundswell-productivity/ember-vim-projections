@@ -2,14 +2,20 @@
   "app/serializers/*.js": {
     "command": "fserializer",
     "template": [
-      "// export default {capitalize}Serializer.extend();",
+      "import JSONAPISerializer from 'ember-data/serializers/json-api;",
+      "export default JSONAPISerializer.extend({",
+      "",
+      "});",
     ]
   },
 
   "app/adapters/*.js": {
-    "command": "adapter",
+    "command": "fadapter",
     "template": [
-      "// export default {capitalize}Adapter.extend();",
+      "import JSONAPIAdapter from 'ember-data/adapters/json-api';",
+      "export default JSONAPIAdapter.extend({",
+      "",
+      "});"
     ]
   },
 
@@ -30,8 +36,8 @@
   "app/components/*.js": {
     "command": "component",
     "template": [
-      "import Ember from 'ember';",
-      "export default Ember.Component.extend({",
+      "import Component from '@ember/component';",
+      "export default Component.extend({",
       "",
       "});",
     ]
@@ -40,8 +46,8 @@
   "app/controllers/*.js": {
     "command": "fcontroller",
     "template": [
-      "import Ember from 'ember';",
-      "export default Ember.Controller.extend({",
+      "import Controller from '@ember/controller';",
+      "export default Controller.extend({",
       "",
       "});",
     ]
@@ -63,7 +69,8 @@
   "app/models/*.js": {
     "command": "fmodel",
     "template": [
-      "import { Model, attr } from 'ember-data'",
+      "import attr from 'ember-data/attr';",
+      "import Model from 'ember-data/model';",
       "export default Model.extend({",
       "",
       "});",
@@ -77,8 +84,8 @@
   "app/routes/*.js": {
     "command": "route",
     "template": [
-      "import Ember from 'ember';",
-      "export default Ember.Route.extend({",
+      "import Route from '@ember/routing/route';",
+      "export default Route.extend({",
       "",
       "});",
     ]
@@ -88,8 +95,8 @@
   "app/services/*.js": {
     "command": "service",
     "template": [
-      "import Ember from 'ember';",
-      "export default Ember.Service.extend({",
+      "import Service from '@ember/service';",
+      "export default Service.extend({",
       "",
       "});",
     ]
@@ -120,33 +127,24 @@
   },
 
   "app/mirage/factories/*.js": {
-    "command": "factory",
+    "command": "ffactory",
     "template": [
-      "import Mirage from 'ember-cli-mirage';",
-      "export default Mirage.Factory.extend({",
+      "import { Factory } from 'ember-cli-mirage';",
+      "export default Factory.extend({",
+      "",
       "});"
     ]
   },
 
   "app/mirage/scenarios/*.js": {
-    "command": "scenario"
+    "command": "fscenario"
   },
 
   "app/mixins/*.js": {
     "command": "mixin",
     "template": [
-      "import Ember from 'ember';",
-      "export default Ember.Mixin.create({",
-      "",
-      "});",
-    ]
-  },
-
-  "app/views/*.js": {
-    "command": "view",
-    "template": [
-      "import Ember from 'ember';",
-      "export default Ember.View.extend({",
+      "import Mixin from '@ember/object/mixin';",
+      "export default Mixin.create({",
       "",
       "});",
     ]
