@@ -93,7 +93,7 @@
   },
 
   "app/services/*.js": {
-    "command": "service",
+    "command": "fservice",
     "template": [
       "import Service from '@ember/service';",
       "export default Service.extend({",
