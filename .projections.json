@@ -122,11 +122,11 @@
     "command": "util"
   },
 
-  "app/mirage/config.js": {
+  "mirage/config.js": {
     "command": "mirage"
   },
 
-  "app/mirage/factories/*.js": {
+  "mirage/factories/*.js": {
     "command": "ffactory",
     "template": [
       "import { Factory } from 'ember-cli-mirage';",
@@ -136,7 +136,7 @@
     ]
   },
 
-  "app/mirage/scenarios/*.js": {
+  "mirage/scenarios/*.js": {
     "command": "fscenario"
   },
 
